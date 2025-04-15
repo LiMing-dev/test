@@ -1,0 +1,4 @@
+/scriptwrite/scriptwriteBackend/node_modules
+/scriptwrite/scriptwriteFrontend/node_modules
+
+/deploy

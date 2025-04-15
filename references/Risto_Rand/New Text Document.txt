@@ -1,0 +1,61 @@
+ 
+S-Soft Team | Tallin, Estonia | https://softteam.io/ | 05/2022~07/2024
+Anais Digital|Bd Brand Whitlock 87, Woluwe-Saint-Lambert, Belgium|https://www.anais.digital/|09/2020 ~ 04/2022 
+MeGaDev | Sepapaja 6, Tallinn, Estonia | https://megadevllc.com/ | 09/2018~06/2020
+
+https://www.linkedin.com/in/risto-rand-116ab8334/
+Risto Rand, 1996.3.7
+estgram247@gmail.com
+E.Vilde tee 69(e,vilda de kuskumendahexa), 12912 Tallinn, Estonia
+372 668 2934
+
+University of Tartu, BS in IT, 09/2015-6/2018 (9/10)
+Tallinna Mustamäe Reaalgümnaasium(Tallinna Mustamae Realgumnasium 5/5)
+
+https://www.linkedin.com/in/mason-gruener/
+
+Solutions Architect
+Solutions Architect
+Syniti · Full-timeSyniti · Full-time
+Jan 2022 - Present · 2 yrs 11 mosJan 2022 to Present · 2 yrs 11 mos
+Austin, Texas, United StatesAustin, Texas, United States
+Appointed to Sales Engineer upon Syniti’s acquisition of 360Science in January 2022, and then to the Solutions Architect role in 2024.
+- Lead technical demonstrations of Syniti Match and other Syniti software.
+- Help prospective and existing customers evaluate Syniti software through demonstrations and proofs of concept.
+- Support the adoption of Syniti software by providing applicable code samples, screenshots, and support documentation to users.
+- Provide technical consultation and guidance on various aspects of Syniti solutions.
+- Work closely with development and product teams to contribute to ongoing development projects and maintain up-to-date product knowledge.
+- Provide a feedback loop between customers and product development, providing recommendations to the solution development plan.
+
+
+Sales Engineer & Developer
+Sales Engineer & Developer
+360Science, a Syniti company · Full-time360Science, a Syniti company · Full-time
+Feb 2020 - Jan 2022 · 2 yrsFeb 2020 to Jan 2022 · 2 yrs
+Austin, Texas, United StatesAustin, Texas, United States
+- Work closely with development and product teams to contribute to ongoing development projects and maintain up-to-date product knowledge.
+- Help prospective and existing customers evaluate 360Science software through demonstrations and proofs of concept.
+- Support the adoption of 360Science software by providing applicable code samples, screenshots, support documentation, etc. to users.
+- Own technical feedback loop between customers and product development, providing recommendations to the product roadmap.
+- Provide technical consultation and guidance on various aspects of 360Science solutions
+- Conduct solution testing and validation.
+
+Software Developer
+Software Developer
+TechPro Technologies · ContractTechPro Technologies · Contract
+Dec 2018 - Feb 2020 · 1 yr 3 mosDec 2018 to Feb 2020 · 1 yr 3 mos
+Holland, PAHolland, PA
+Developed REST APIs for Hotel Reservation System using Java, SpringBoot, Spring Data, Spring Security and MongoDB.
+Containerized the microservice using Docker.
+Deployed the dockerized microservice on AWS ECS and exposed the endpoints via API Gateway.
+Integrated above REST APIs with various Hotel websites.
+Secured the REST APIs using Spring Security OAuth2 with JWT tokens.
+Wrote the persistence layer to interact with MongoDB using Spring Data.
+Used GitHub to collaborate with other developers. Well versed in Git and team collaboration
+
+
+
+
+
+
+

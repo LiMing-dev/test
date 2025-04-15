@@ -1,0 +1,33 @@
+Using **NVM (Node Version Manager)** is generally better than using **YUM** for installing Node.js on AWS Linux. Here's why:
+
+### Advantages of NVM:
+1. **Version Management**: NVM allows you to install and switch between multiple versions of Node.js, which is useful if your projects require different versions[1][2][7].
+2. **Flexibility**: You can easily update to the latest LTS (Long-Term Support) or specific versions of Node.js without relying on system package managers, which may offer outdated versions[1][4].
+3. **User-Specific Installation**: NVM installs Node.js in the user's directory, avoiding potential permission issues when managing global npm packages[4][7].
+
+### Disadvantages of NVM:
+- Node.js installed via NVM is user-specific, meaning it won't be globally available to all users unless explicitly configured[8].
+
+### Advantages of YUM:
+1. **Global Installation**: Node.js installed via YUM is available system-wide, making it accessible to all users without additional configuration[8].
+2. **Simplicity**: For basic setups or single-version requirements, YUM provides a straightforward method to install Node.js.
+
+### Disadvantages of YUM:
+- The version of Node.js provided by YUM repositories is often outdated, which can lead to compatibility issues with modern applications[1][4].
+- Managing multiple versions of Node.js is cumbersome and not natively supported by YUM.
+
+### Recommendation:
+Use **NVM** if you need flexibility, multiple versions, or the latest Node.js releases. Use **YUM** only for simple setups where a single global installation suffices and version control is not a concern.
+
+Citations:
+[1] https://www.freecodecamp.org/news/how-to-install-node-js-on-ubuntu/
+[2] https://www.linode.com/docs/guides/how-to-install-use-node-version-manager-nvm/
+[3] https://docs.aws.amazon.com/cloud9/latest/user-guide/sample-nodejs.html
+[4] https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/
+[5] https://gist.github.com/rlwong2/4dbed603f2c2df933f4038aa710fe175
+[6] https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html
+[7] https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/
+[8] https://stackoverflow.com/questions/8205369/installing-npm-on-aws-ec2
+
+---
+Answer from Perplexity: pplx.ai/share

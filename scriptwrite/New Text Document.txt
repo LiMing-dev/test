@@ -1,0 +1,256 @@
+i have an app using MERN and I want to add user management and board management
+1. user management
+   auth should be made of jwt and google oauth2.
+   - signup with email, phonenumber, name, password
+   - login with email and password
+   - logout if user want or token timeout
+   - user level for plan (basic, plus, ...)
+   - every plan has monthly credits limit
+   - user can update his plan
+   - user can enjoy thier free trial for a few hours
+   - user can share his feedback
+   
+
+2. board management
+   users who have permission with token work on board, and they can create or delete board.
+   On board, user can only do allowed feature according to the plan and every feature has credits for implement.
+   every board has to have user id so that we can provide users with their board.
+   users can see board example or template
+   user can create or delete folders which can include several boards associated with same project
+
+so can you help me with DB schema and API structure for this project?
+
+Tables:
+┌───────────────────────┐          ┌───────────────────────┐
+│         users         │          │    auth_providers     │
+├───────────────────────┤          ├───────────────────────┤
+│ id (PK)               │◄─┐       │ id (PK)               │
+│ email (UNIQUE)        │  ├───────┤ user_id (FK)          │
+│ phone_number (UNIQUE) │  │       │ provider (google/etc) │
+│ name                  │  │       │ provider_user_id      │
+│ password_hash         │  │       └───────────────────────┘
+│ user_level (ENUM)     │  │
+│ plan_expiration       │  │
+│ created_at            │  │       ┌───────────────────────┐
+│ updated_at            │  │       │       projects        │
+└───────────────────────┘  │       ├───────────────────────┤
+                           ├───────┤ id (PK)               │
+┌───────────────────────┐  │       │ user_id (FK)          │
+│        boards         │  │       │ name                  │
+├───────────────────────┤  │       │ description           │
+│ id (PK)               │  │       │ created_at            │
+│ user_id (FK)          │◄─┘       │ updated_at            │
+│ title                 │          └───────────────────────┘
+│ description           │
+│ created_at            │
+│ updated_at            │
+└───────────────────────┘
+
+
+POST    /api/auth/signup           # Email/password registration
+POST    /api/auth/login            # Email/password login
+POST    /api/auth/logout           # JWT invalidation
+GET     /api/auth/google           # Initiate Google OAuth2 flow
+GET     /api/auth/google/callback  # Google OAuth2 callback
+
+GET     /api/users/me              # Get current user profile
+PUT     /api/users/me              # Update user details
+DELETE  /api/users/me              # Deactivate account
+
+GET     /api/users/me/projects     # List user projects
+POST    /api/users/me/projects     # Create new project
+
+GET     /api/boards               # List all user's boards
+POST    /api/boards               # Create new board
+GET     /api/boards/{id}          # Get board details
+PUT     /api/boards/{id}          # Update board
+DELETE  /api/boards/{id}          # Delete board
+
+
+I have an app using MERN, and it is an AI assistant for script wirting with GTP-4o, Claude 3.7 sonnet and Deepseek.
+Now I have finished user auth, and project management.
+I want to integrate with Stripe so that users can use this app with payment and I can earn money.
+I think monthly payment and monthly credit limits are ok, and if user exceed the limit, then he needs to pay more.
+Free trial is also ok.
+
+It sounds like you’re working on an exciting project, and integrating Stripe for payment handling is a great way to monetize your app. Here's a step-by-step outline on how you can integrate Stripe into your MERN stack app and manage subscriptions, credits, and free trials.
+
+### 1. **Set Up Stripe Account**
+   - Create a Stripe account [here](https://dashboard.stripe.com/register).
+   - Obtain your **Publishable Key** and **Secret Key** from the Stripe dashboard. These are used for front-end and back-end integration respectively.
+
+### 2. **Install Stripe SDK**
+   You'll need to install Stripe's official SDK in your backend and frontend.
+
+   **Backend:**
+   In your backend (Node.js), install the Stripe package:
+   ```bash
+   npm install stripe
+   ```
+
+   **Frontend:**
+   On the frontend, install the Stripe.js library:
+   ```bash
+   npm install @stripe/stripe-js
+   ```
+
+### 3. **Create Subscription Plans on Stripe**
+   Before coding, you need to create subscription plans in the Stripe dashboard.
+   - Go to the **Products** section in Stripe Dashboard and create a product (like “Monthly Subscription”).
+   - Under this product, create pricing tiers (e.g., $10/month).
+   - You can also define a trial period (e.g., 7 days) for the free trial.
+
+### 4. **Backend: Stripe Integration**
+   In your backend (Express or Node.js server), integrate Stripe to handle payment processing, subscription creation, and credit management.
+
+   - Initialize Stripe with your secret key:
+     ```javascript
+     const stripe = require('stripe')('your_secret_key');
+     ```
+
+   - **Create Checkout Session:**
+     For subscription payment, you can create a checkout session that the user will use to complete the payment process.
+     ```javascript
+     const createCheckoutSession = async (req, res) => {
+       const { priceId } = req.body; // Get price ID from frontend (you can create different pricing tiers)
+       const session = await stripe.checkout.sessions.create({
+         payment_method_types: ['card'],
+         line_items: [{
+           price: priceId,  // price ID from Stripe Dashboard
+           quantity: 1,
+         }],
+         mode: 'subscription',
+         success_url: `${YOUR_DOMAIN}/success?session_id={CHECKOUT_SESSION_ID}`,
+         cancel_url: `${YOUR_DOMAIN}/cancel`,
+       });
+
+       res.json({ id: session.id });
+     };
+     ```
+
+   - **Webhook for Stripe Events:**
+     Set up a webhook to listen for events like `invoice.payment_succeeded`, `invoice.payment_failed`, and `customer.subscription.created` to update your database.
+     ```javascript
+     const endpointSecret = 'your_webhook_secret';
+
+     const handleStripeWebhook = async (req, res) => {
+       const sig = req.headers['stripe-signature'];
+       let event;
+
+       try {
+         event = stripe.webhooks.constructEvent(req.body, sig, endpointSecret);
+       } catch (err) {
+         return res.status(400).send(`Webhook Error: ${err.message}`);
+       }
+
+       switch (event.type) {
+         case 'invoice.payment_succeeded':
+           const invoice = event.data.object;
+           // Mark user as paid or handle credits based on invoice
+           break;
+         case 'invoice.payment_failed':
+           const failedInvoice = event.data.object;
+           // Handle failed payment (e.g., notify user)
+           break;
+         // Handle other events (e.g., subscription updates)
+       }
+       res.status(200).json({ received: true });
+     };
+     ```
+
+   - **Handle Credits:**
+     You’ll need to integrate logic that tracks how many credits the user has each month and how much they’ve used.
+     - You can store the credits in your database and update them each time the user uses a resource.
+     - Once the credits are exhausted, prompt the user to upgrade or buy more credits.
+
+### 5. **Frontend: Stripe Checkout Flow**
+   On the frontend, you'll integrate Stripe to create the checkout session.
+
+   - First, initialize Stripe:
+     ```javascript
+     import { loadStripe } from '@stripe/stripe-js';
+
+     const stripePromise = loadStripe('your_publishable_key');
+     ```
+
+   - Then, create a checkout function to redirect users to Stripe:
+     ```javascript
+     const handleCheckout = async () => {
+       const stripe = await stripePromise;
+
+       const response = await fetch('/create-checkout-session', {
+         method: 'POST',
+         headers: {
+           'Content-Type': 'application/json',
+         },
+         body: JSON.stringify({ priceId: 'your_price_id' }),  // Pass the pricing ID for the plan selected
+       });
+
+       const session = await response.json();
+
+       const result = await stripe.redirectToCheckout({ sessionId: session.id });
+       if (result.error) {
+         alert(result.error.message);
+       }
+     };
+     ```
+
+   - Add the **"Pay Now"** button in your UI to initiate the checkout process.
+
+### 6. **Manage Subscription Status and Limits**
+   - Use the `customer.subscription.created`, `customer.subscription.updated`, and `customer.subscription.deleted` webhooks to track the user’s subscription status in your database.
+   - For monthly credits, you can track the amount in the user’s profile. Every month, reset the credits to the initial limit. If they go over the credits, prompt them to pay for extra usage.
+   - You can also charge users for overages by using the `invoice.created` event, adding extra line items for additional credits.
+
+### 7. **Free Trial**
+   - To offer a free trial, set the trial period in the product pricing in the Stripe Dashboard. You can also manage it via API when creating the subscription.
+   - After the free trial ends, the user will automatically be charged, and you can use webhooks to track when this happens.
+
+### 8. **Testing and Deployment**
+   - Make sure to test everything in **Stripe’s test mode** using the provided test card details.
+   - Once everything works smoothly in test mode, switch your keys to live mode and deploy the app.
+
+### 9. **Stripe Dashboard Monitoring**
+   - After deployment, you can monitor your Stripe account from the Stripe Dashboard, where you'll be able to see active subscriptions, payments, invoices, and more.
+
+### Recap:
+- Integrate Stripe in both the frontend and backend of your MERN app.
+- Set up subscription plans, free trials, and payment handling via Stripe.
+- Track credit usage and offer additional credit purchases if users exceed their limits.
+- Use webhooks to manage payment status and subscription updates.
+
+This integration will give you a solid foundation to start monetizing your app. Let me know if you'd like more specific code examples or if you encounter any challenges during the process!
+
+
+this is my user-schema for ai app service using MERN
+const userSchema = new mongoose.Schema({
+    name: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    phoneNumber: { type: Number, required: true, unique: true },
+    password: { type: String, required: true },
+    // googleId: { type: String }, // for Google OAuth
+    verificationCode: { type: String },
+    isVerified: { type: Boolean, default: false },
+    verificationCodeExpiresAt: { type: Date },
+    spent: { type: Number, default: 0 },
+    plan: {
+        level: { type: String, default: 'trial' },
+        creditsUsed: { type: Number, default: 0 },
+        maxCredits: { type: Number, default: 50 }, // Monthly credit limit based on plan
+        startDate: { type: Date, default: Date.now },
+        endDate: { type: Date }, // for trial or subscription end
+    },
+    createdAt: { type: Date, default: Date.now },
+    updatedAt: { type: Date, default: Date.now }
+});
+
+and I finished project for service and now I am going to build admin dashboard.
+On adminDashboard, I want to see new customers, total CreditUsed, total money earned for today, this month, total.
+And also I want to see statistics of that as a chart.
+
+UI is almost completed, and I need server-side code.
+
+I am going to add box that shows credential usage of apify, openai, anthropic, deepseek, aws, and another page where we input the value and date of charge
+I will also add user list on another board so that we can see all users and plan-categorized users and etc
+and have sth to discuss with you
+I planned to work on full time for two weeks before launch, but as you see, i am still working on full-time for payment and admin Dashboard

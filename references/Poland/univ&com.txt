@@ -1,0 +1,204 @@
+
+                          $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+                             Famous Universities in Poland 
+                          $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Poland has several prestigious universities known for their high-quality education, especially in the fields of computer science and engineering. Here are some of the most well-known ones:
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+University of Warsaw (Uniwersytet Warszawski) |
+***********************************************
+The largest and one of the top universities in Poland.
+Known for strong programs in computer science, mathematics, and engineering.
+
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ AGH University of Science and Technology (Akademia Górniczo-Hutnicza)|
+***********************************************************************
+Located in Kraków, AGH is one of the leading universities for technical studies, especially engineering and computer science.
+It has a high reputation in both academic research and cooperation with the industry.
+
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warsaw University of Technology (Politechnika Warszawska)|
+**********************************************************
+Known for its engineering, IT, and computer science programs.
+Strong ties to tech companies, making it a popular choice for future software developers.
+
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Wrocław University of Science and Technology (Politechnika Wrocławska)|
+***********************************************************************
+One of the best universities for engineering and computer science in Poland.
+A significant contributor to the Polish IT sector with many partnerships with global tech companies.
+
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Jagiellonian University (Uniwersytet Jagielloński)|
+***************************************************
+One of the oldest and most prestigious universities in Poland, located in Kraków.
+While historically focused on humanities and law, it offers strong programs in mathematics, computer science, and physics.
+
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Poznań University of Technology (Politechnika Poznańska)|
+*********************************************************
+A leading university in engineering and computer science.
+Known for producing graduates who go on to work in software development, IT, and telecommunications.
+
+
+		  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+			Famous Companies in Poland (Tech & Software Industry)
+		  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+Poland is known for having a thriving tech industry, with several well-established companies in both the software development and IT sectors. Here are some of the most famous:
+
+1. CD Projekt RED
+
+One of Poland's most internationally recognized companies, known for developing the Witcher series and Cyberpunk 2077.
+They are a major player in the video game industry and employ many game developers, software engineers, and designers.
+
+
+2. Asseco Poland
+
+A leading IT services company in Poland and one of the largest in Europe.
+Specializes in enterprise software solutions, IT consulting, and outsourcing.
+
+
+3. SoftServe
+
+A global IT services company with a strong presence in Poland.
+Known for software development and consulting services in the areas of cloud computing, AI, and software engineering.
+
+
+4. Intel Technology Poland
+
+A branch of the global giant Intel, focusing on software development and hardware solutions.
+Located in Gdańsk, they specialize in microprocessor design and related R&D.
+
+
+5. Netguru
+
+A well-known Polish software development company specializing in custom web and mobile app development.
+Works with global clients and is one of Poland's leading software houses.
+
+
+6. Allegro
+
+The largest online marketplace in Poland, similar to eBay or Amazon.
+Allegro is a significant employer of developers and engineers, primarily focusing on e-commerce and tech solutions.
+
+
+7. Sii Poland
+
+A major IT services provider, delivering solutions in software development, consulting, and testing.
+Sii works with global clients across industries like banking, telecommunications, and manufacturing.
+
+
+8. T-Mobile Poland
+
+The Polish branch of the global telecommunications company, T-Mobile.
+Focuses on IT solutions, telecommunications, and technology innovations in software and networking.
+
+
+9. ING Tech Poland
+
+The IT branch of ING, focusing on software development, infrastructure, and digital solutions.
+ING Tech Poland is a key player in the fintech industry and employs many developers and tech specialists.
+
+
+10. X-kom
+
+One of Poland's leading electronics and technology retailers.
+Known for offering technology solutions as well as hiring developers and IT professionals to support their growing e-commerce business.
+
+
+11. Zalando (Poland)
+
+Industry: E-commerce / Fashion Tech
+Zalando is a major European fashion retailer with a strong development hub in Wrocław. They focus on e-commerce platforms, software engineering, and logistics technologies.
+
+
+12. Luxoft
+
+Industry: IT Services & Consulting
+A global IT services company with a significant presence in Kraków and Wrocław. Luxoft specializes in custom software development, consulting, and financial services.
+
+
+13. Ingram Micro
+
+Industry: Technology Distribution & IT Solutions
+Ingram Micro provides a variety of IT solutions and products and has development teams in Warsaw. They focus on cloud computing, software solutions, and enterprise services.
+
+
+14. Collabera
+
+Industry: IT Services & Recruitment
+Collabera is a multinational company that offers IT consulting, recruitment, and software development services. They have multiple offices in Poland, especially in Kraków and Wrocław.
+
+
+15. Capgemini Poland
+
+Industry: Consulting & IT Services
+Capgemini, a global leader in consulting and IT services, has a substantial presence in Kraków and Wrocław, focusing on digital transformation, cloud computing, and enterprise software solutions.
+
+
+16. Cognizant Technology Solutions
+
+Industry: IT Services & Consulting
+A major player in the global IT services industry, Cognizant has development teams and offices in Kraków, Gdańsk, and Warsaw, focusing on digital engineering, AI, and cloud technologies.
+
+
+17. Sopra Steria
+
+Industry: IT Services & Consulting
+A European leader in IT services, Sopra Steria has a presence in Kraków and Warsaw, specializing in digital transformation, cloud services, and enterprise software.
+
+
+18. GFT Technologies
+
+Industry: IT Services & Financial Technology (FinTech)
+GFT is a global provider of IT services, especially in the FinTech sector. They have a development hub in Wrocław, focusing on blockchain, AI, and cloud solutions for financial institutions.
+
+
+19. Mirantis
+
+Industry: Cloud Computing & Software Development
+Mirantis has a significant presence in Warsaw, focusing on cloud infrastructure and containerization technologies. They specialize in DevOps, Kubernetes, and cloud-native development.
+
+
+20. Cloud Engineering
+
+Industry: Cloud Services & IT Solutions
+Specializes in cloud infrastructure, AWS, and DevOps solutions. The company is growing rapidly in Poland with a focus on cloud computing, IT automation, and digital transformation services.
+
+
+21. Ailleron
+
+Industry: Software Development & FinTech
+Ailleron is a Polish company that focuses on developing software for banks, insurance companies, and corporations. They work on projects involving cloud services, data analytics, and machine learning.
+
+
+22. Vivid Money
+
+Industry: FinTech
+Vivid Money is a digital banking and investment app based in Berlin, but with development teams in Warsaw. They focus on banking software, mobile applications, and payment technologies.
+
+
+23. Objectivity
+
+Industry: IT Consulting & Custom Software Development
+Based in Wrocław, Objectivity specializes in custom software development, cloud services, and business transformation, primarily for industries like banking, healthcare, and retail.
+
+
+24. Tide
+
+Industry: FinTech / Digital Banking
+A rapidly growing FinTech company that offers business banking services. They have a development team based in Kraków and focus on mobile banking apps and AI-powered financial solutions.
+
+
+25. Toptal
+
+Industry: Software Development / Talent Network
+Toptal is a network of elite freelancers, specializing in software development, design, and finance. While it's a global platform, it has a Polish presence, particularly in cities like Warsaw and Kraków.

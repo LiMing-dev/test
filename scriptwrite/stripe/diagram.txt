@@ -1,0 +1,34 @@
+The attached diagram illustrates the process of a plan-based payment system in a service app using Stripe. It showcases the following sequential steps:
+
+1. **Customer selects a subscription plan**: The customer chooses a plan that suits their needs.
+2. **Customer enters payment details**: The customer provides their payment information.
+3. **Stripe tokenizes payment data**: Stripe securely converts sensitive payment data into tokens for safe storage.
+4. **Stripe processes payment**: Stripe handles the transaction, ensuring funds are transferred securely.
+5. **Payment confirmation sent to customer**: The customer receives confirmation of the successful transaction.
+6. **Funds transferred to business account**: Stripe transfers the collected funds to the business's account.
+
+This flow emphasizes Stripe's role in ensuring secure, efficient, and user-friendly payment processing for subscription-based services.
+
+Citations:
+[1] https://www.freshbooks.com/hub/payments/what-is-stripe
+[2] https://stripe.com/billing/features
+[3] https://stripe.com/resources/more/how-to-accept-recurring-payments
+[4] https://stripe.com/resources/more/subscription-payment-processing-101
+[5] https://docs.stripe.com/payments/checkout/pricing-table
+[6] https://docs.stripe.com/billing/subscriptions/build-subscriptions
+[7] https://www.revenuecat.com/docs/web/stripe
+[8] https://www.subscriptionflow.com/2023/07/saas-stripe-integration-for-subscription-payments/
+[9] https://www.wingback.com/blog/implementiing-usage-based-billing-with-stripee
+[10] https://stripe.com/resources/more/subscription-billing-101
+[11] https://baremetrics.com/blog/advanced-stripe-dashboards-for-subscription-management
+[12] https://stripe.com/resources/more/automated-billing-systems-101
+[13] https://www.youtube.com/watch?v=Ih_7ivdNHzs
+[14] https://stripe.com/resources/more/automated-payment-systems-explained
+[15] https://www.youtube.com/watch?v=Tx84qQIG6Jk
+[16] https://www.nerdwallet.com/article/small-business/what-is-stripe
+[17] https://www.cleveroad.com/blog/a-comprehensive-guide-on-testing-and-designing-stripe-based-payment-logic/
+[18] https://stripe.com/guides/payment-methods-guide
+[19] https://www.freecodecamp.org/news/how-to-design-payment-logic-on-stripe-and-apply-it/
+
+---
+Answer from Perplexity: pplx.ai/share

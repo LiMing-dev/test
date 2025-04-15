@@ -1,0 +1,53 @@
+const [note, setNote] = useState("");
+
+ const { darkMode } = useContext(DarkModeContext);
+ const textAreaRef = useRef(null);
+  const handleInputChange = (e) => {
+    setNote(e.target.value);
+    if (e.target.scrollHeight > 50) {
+      e.target.style.height = `${e.target.scrollHeight}px`;
+    }
+    if (e.target.value === "") {
+      e.target.style.height = `${50}px`;
+    }
+    dispatch(
+      updateNode({
+        id: data.id,
+        data: {
+          ...data,
+          note: e.target.value,
+        },
+      })
+    ); const textAreaRef = useRef(null);
+  const handleInputChange = (e) => {
+    setNote(e.target.value);
+    if (e.target.scrollHeight > 50) {
+      e.target.style.height = `${e.target.scrollHeight}px`;
+    }
+    if (e.target.value === "") {
+      e.target.style.height = `${50}px`;
+    }
+    dispatch(
+      updateNode({
+        id: data.id,
+        data: {
+          ...data,
+          note: e.target.value,
+        },
+      })
+    );
+
+
+{/* Notes Section */}
+        <textarea
+          ref={textAreaRef}
+          className={` nodrag w-full h-[36px] min-h-[50px] max-h-[120px] ${
+            darkMode
+              ? "bg-[#f5f8fa] border-neutral-300 text-black"
+              : "bg-[#292929] border-[#292929] text-neutral-200"
+          } text-sm font-sans  p-1.5 pr-3 rounded-[8px]  focus-within:outline-none resize-y `}
+          placeholder={"Add notes for AI to use..."}
+          value={note}
+          onChange={(e) => handleInputChange(e)}
+          rows={1}
+        ></textarea>
